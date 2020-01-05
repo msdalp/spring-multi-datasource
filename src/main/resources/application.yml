@@ -1,0 +1,35 @@
+spring:
+  tomcat:
+    max-wait: 20000
+    max-active: 50
+    max-idle: 20
+    min-idle: 15
+
+server:
+  url: http://localhost
+  port: 8080
+
+app.datasource:
+  blog:
+    url: jdbc:h2:file:./db1
+    username: root
+    password: zV2PrVc17
+    connection-timeout: 50000
+    idle-timeout: 300000
+    minimum-idle: 8
+    max-lifetime: 900000
+    pool-name: PoolDS1
+    driver-class-name: org.h2.Driver
+    maximum-pool-size: 8
+
+  log:
+    url: jdbc:h2:file:./db2
+    username: root
+    password: zV2PrVc17
+    driver-class-name: org.h2.Driver
+    connection-timeout: 50000
+    idle-timeout: 300000
+    minimum-idle: 8
+    max-lifetime: 900000
+    pool-name: PoolDS2
+    maximum-pool-size: 8
